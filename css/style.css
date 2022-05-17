@@ -1,0 +1,9 @@
+.board-field {
+    border: 1px solid green;
+}
+
+.board {
+    border: 1px solid black;
+    width: 360px;
+    height: 360px;
+}
