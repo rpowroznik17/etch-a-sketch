@@ -1,9 +1,10 @@
 .board-field {
-    border: 1px solid green;
+    background-color: white;   
 }
 
 .board {
     border: 1px solid black;
     width: 360px;
     height: 360px;
+    display: grid;
 }
