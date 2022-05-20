@@ -1,5 +1,7 @@
 .board-field {
-    background-color: white;   
+    background-color: white;
+    border: 1px solid black;
+    user-select: none;   
 }
 
 .board {
