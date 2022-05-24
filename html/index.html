@@ -8,12 +8,23 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <button id="creation-btn">Change size</button>
-    <button id="clear-btn">Clear</button>
-    <button id="rubber-btn">Rubber</button>
-    <button id="draw-btn">Draw</button>
+    <header>
+        <h1>Etch-a-Sketch</h1>
+    </header>
 
-    <input type="color" id="colorPicker">
+    <main id="main">
+        
+        <div id="settings">
+            <input type="color" id="colorPicker">
+            <button id="creation-btn">Change size</button>
+            <button id="show-grid-btn">Show grid</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+
+        <div id="canvas"></div>
+    </main>
+    
+
 
     <script src="../js/sketchpad.js"></script>
 </body>

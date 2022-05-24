@@ -1,12 +1,60 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .board-field {
     background-color: white;
-    border: 1px solid black;
     user-select: none;   
+}
+
+.board-field-border {
+    border: 1px solid black;
 }
 
 .board {
     border: 1px solid black;
-    width: 360px;
-    height: 360px;
+    width: 450px;
+    height: 450px;
     display: grid;
+}
+
+main {
+    display: flex;
+    margin-top: 3rem;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 0 3rem;
+    gap: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    min-width: 6rem;
+    min-height: 2rem;
+    background-color: white;
+    border: 1.5px solid black;
+    cursor: pointer;
+}
+
+#colorPicker {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    min-width: 5rem;
+    min-height: 5rem;
+    cursor: pointer;
+}
+
+#colorPicker::-webkit-color-swatch {
+    border-radius: 50%;
+    border: 2px solid black;
 }
