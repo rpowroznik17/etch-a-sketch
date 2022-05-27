@@ -1,7 +1,34 @@
+:root {
+    --header-font: 'Dancing Script', cursive;
+    --default-font: 'DM Mono', monospace;
+
+    --light-pink: #F6C6EA;
+    --dark-pink: #C490E4;
+    --dark-pink-font: #7b34a7;
+    --light-beige: #F9F9F9;
+    --light-green: #CDF0EA;
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--default-font);
+}
+
+body {
+    background-color: var(--light-beige);
+}
+
+header {
+    padding: 2rem 0;
+    background-color: var(--light-green);
+}
+
+.title {
+    font-family: var(--header-font);
+    font-size: 4.5rem;
+    font-weight: 500;
 }
 
 .board-field {
@@ -18,18 +45,20 @@
     width: 450px;
     height: 450px;
     display: grid;
+    box-shadow: 0px 1px 4px 0.5px;
 }
 
 main {
     display: flex;
-    margin-top: 3rem;
+    margin: 5rem 0;
+    justify-content: center;
 }
 
 #settings {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 2rem 0 3rem;
+    padding-right: 2rem;
     gap: 2rem;
 }
 
@@ -38,11 +67,27 @@ h1 {
 }
 
 button {
-    min-width: 6rem;
-    min-height: 2rem;
-    background-color: white;
-    border: 1.5px solid black;
+    min-width: 7rem;
+    min-height: 2.5rem;
+    font-weight: 500;
+    border: none;
+    color: var(--dark-pink-font);
+    background-color: var(--light-pink);
+}
+
+button:hover {
+    border: 1px solid black;
+    background-color: var(--dark-pink);
+    color: var(--light-pink);
+}
+
+.settings-item {
     cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.settings-item:hover {
+    transform: scale(1.1);
 }
 
 #colorPicker {
@@ -56,5 +101,14 @@ button {
 
 #colorPicker::-webkit-color-swatch {
     border-radius: 50%;
-    border: 2px solid black;
+    box-shadow: 0px 0px 3.5px 1px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    word-spacing: 2px;
 }

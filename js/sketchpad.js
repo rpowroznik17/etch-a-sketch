@@ -1,6 +1,6 @@
 let isMouseDown = false;
 let colorPicker;
-let defaultColor = '#4287f5';
+let defaultColor = '#ad7bc9';
 let currentColor = defaultColor;
 
 const canvas = document.querySelector('#canvas');
@@ -79,13 +79,5 @@ function stopDrawing(){
 
 function showGrid() {
     const boardFields = document.querySelectorAll('.board-field');
-    boardFields.forEach(field => toggleBorder(field));
-}
-
-function toggleBorder(field) {
-    if (field.classList.length === 2) {
-        field.classList.remove('board-field-border');
-    } else {
-        field.classList.add('board-field-border');
-    }
+    boardFields.forEach(field => field.classList.toggle('board-field-border'));
 }
